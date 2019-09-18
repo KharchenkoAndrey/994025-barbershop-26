@@ -3,76 +3,82 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Барбершоп</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
-    <header>
-    	<nav>
-    		<a>
+    <header class="main-header">
+    	<nav class="main-navigation">
+    		<a class="main-header-logo">
     			<img src="img/logo.svg" width="368" height="153" alt="Логотип барбершопа Бородинский">
     		</a>
-    		<ul>
+    		<ul class="site-navigation">
     			<li><a href="#">Информация</a></li>
     			<li><a href="#">Новости</a></li>
     			<li><a href="#">прайс-лист</a></li>
     			<li><a href="#">магазин</a></li>
     			<li><a href="#">контакты</a></li>
     		</ul>
+        <ul class="user-navigation">
+          <li><a class="login-link" href="login.html">Вход</a></li>
+        </ul>
     	</nav>
-    		<ul>
-    			<li><button type="button">Вход</button></li>
-    		</ul>
      </header>
 
-     <main>
+     <main class="container">
 
-		<h1>Барбершоп Бородинский</h1>
+		<h1 class="visually-hidden">Барбершоп Бородинский</h1>
 
-		<section>
-			<h2>Преимущества</h2>
-			<ul>
-				<li>
+		<section class="features">
+			<h2 class="visually-hidden">Преимущества</h2>
+			<ul class="features-list">
+				<li class="feature-item">
 					<h3>Быстро</h3>
 					<p>МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДАТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ!</p>
 				</li>
-				<li>
+				<li class="feature-item">
 					<h3>Круто</h3>
 					<p>ЗАБУДЬТЕ, КАК ВЫ СТРИГЛИСЬ РАНЬШЕ.
 						МЫ СДЕЛАЕМ ИЗ ВАС ЗВЕЗДУ ФУТБОЛА ИЛИ КИНО!
 						ВО ВСЯКОМ СЛУЧАЕ ВНЕШНЕ.
 					</p>
 				</li>
-				<li>
+				<li class="feature-item">
 					<h3>Дорого</h3>
 					<p>НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И НЕ МОГУТ СТОИТЬ ДЕШЕВО. К ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ ОПРЕДЕЛЕННЫЙ СТАТУС?</p>
 				</li>
 			</ul>
 		</section>
 
-		<section>
+  <div class="index-columns">
+		<section class="news">
 			<h2>Новости</h2>
-			<ul>
-				<li>
+			<ul class="news-list">
+				<li class="news-item">
 					<p>НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ</p>
 					<time datetime="2019-01-11">11 января</time>
 				</li>
-				<li>
+				<li class="news-item">
 					<p>В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДAТЕЛЬ МНОЖЕСТВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ СТРОЙНЫЕ РЯДЫ</p>
 					<time datetime="2019-01-18">18 января</time>
 				</li>
 			</ul>
 		</section>
 
-		<section>
+		<section class="gallery">
 			<h2>фотогалерея</h2>
-			<figure>
+			<figure class="gallery-content">
 			<a href="#"><img src="img/gallery.jpg" width="286" height="164" alt="Интерьер"></a>
-			<button type="button">Назад</button>
-			<button type="button">Вперед</button>
+			<button class="button gallery-button gallery-button-back" type="button">Назад</button>
+			<button class="button gallery-button gallery-button-next" type="button">Вперед</button>
 			</figure>
 		</section>
+  </div>
 
-		<section>
+  <div class="index-columns">
+		<section class="contacts">
 			<h2>Контактная информация</h2>
 			<p>
 				БАРБЕРШОП «БОРОДИНСКИЙ»
@@ -84,87 +90,88 @@
 				ПН—ПТ: С 10:00 ДО 22:00
 				СБ—ВС: С 10:00 ДО 19:00
 			</p>
-			<a href="#">Как проехать</a>
-			<a href="#">Обратная связь</a>
+			<a class="button" href="#">Как проехать</a>
+			<a class="button" href="#">Обратная связь</a>
 		</section>
 
-		<section>
+		<section class="appointment">
 			<h2>Записаться</h2>
-			<p>УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ</p>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <p>
+			<p class="appointment-info">УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ</p>
+      <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="appointment-item">
           <label for="appointment-date">Дата</label>
           <input id="appointment-date" type="text" name="date" value="" placeholder="08.10.2017">
         </p>
-        <p>
+        <p class="appointment-item">
           <label for="appointment-time">Время</label>
           <input id="appointment-time" type="text" name="time" value="" placeholder="10:00">
         </p>
-        <p>
+        <p class="appointment-item">
           <label for="appointment-name">Ваше имя</label>
           <input id="appointment-name" type="text" name="name" value="" placeholder="Борода">
         </p>
-        <p>
+        <p class="appointment-item">
           <label for="appointment-phone">Телефон</label>
           <input id="appointment-phone" type="tel" name="phone" value="" placeholder="+7 123 456-78-90">
         </p>
-        <button type="submit">Отправить</button>
+        <button class="button" type="submit">Отправить</button>
       </form>
 		</section>
 
      </main>
 
-     <footer>
-     	<p>
+     <footer class="main-footer">
+     	<p class="footer-contacts">
      		БАРБЕРШОП «БОРОДИНСКИЙ»<br>
 			АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8<br>
 			<a href="#">КАК НАС НАЙТИ?</a><br>
 			ТЕЛЕФОН: +7 (495) 666-02-66
      	</p>
-     	<div>
-     		<p>Давайте дружить!</p>
+     	<div class="footer-social">
+     		<b>Давайте дружить!</b>
      		<ul>
-     			<li><a href="#">Вконтакте</a></li>
-     			<li><a href="#">Фейсбук</a></li>
-     			<li><a href="#">Инстаграм</a></li>
+     			<li class="social-button" ><a href="#">Вконтакте</a></li>
+     			<li class="social-button" ><a href="#">Фейсбук</a></li>
+     			<li class="social-button" ><a href="#">Инстаграм</a></li>
      		</ul>
      	</div>
-     	<p>
+     	<p class="footer-copyright">
      		Разработано:
-     		<a href="https://htmlacademy.ru">HTML Academy</a>
+     		<a class="button" href="https://htmlacademy.ru">HTML Academy</a>
      	</p>
      </footer>
 
-     	<section>
+     	<section class="modal modal-login">
      		<h2>Личный кабинет</h2>
      		<p>Введите свой логин и пароль.</p>
-        <form action="https://echo.htmlacademy.ru" method="post">
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
           <p>
             <label class="visualy-hidden" for="user-login">Логин</label>
-            <input id="user-login" type="text" name="login" value="" placeholder="Логин">
+            <input class="login-icon-user" id="user-login" type="text" name="login" value="" placeholder="Логин">
           </p>
           <p>
             <label class="visualy-hidden" for="user-password">Пароль</label>
-            <input id="user-password" type="password" name="password" value="" placeholder="Пароль">
+            <input class="login-icon-password" id="user-password" type="password" name="password" value="" placeholder="Пароль">
           </p>
-          <p>
-            <input id="login-password-info" type="checkbox" name="remember">
-            <label for="login-password-info">
+          <p class="login-password-info">
+            <input class="visualy-hidden" id="login-password-info" type="checkbox" name="remember">
+            <label class="login-checkbox" for="login-password-info">
+              <span class="checkbox-indicator"></span>
               Запомните меня
             </label>
-            <a href="">Я забыл пароль!</a>
+            <a class="restore" href="">Я забыл пароль!</a>
           </p>
-          <button type="submit">Войти</button>
+          <button class="button" type="submit">Войти</button>
         </form>
-     		<button type="button">Закрыть</button>
+     		<button class="modal-close" type="button">Закрыть</button>
      	</section>
 
-     	<section>
+     	<section class="modal modal-map">
      		<h2 class="visualy-hidden">Как до нас добраться</h2>
         <p>
           <img src="img/map.jpg" width="766" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
         </p>
-     		<button type="buttton">Закрыть</button>
+     		<button class="modal=close" type="buttton">Закрыть</button>
      	</section>
 
   </body>
