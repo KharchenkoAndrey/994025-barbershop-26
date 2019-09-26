@@ -395,14 +395,33 @@ img {
 }
 
 .breadcrumbs {
+  display: flex;
   margin: 0;
   padding: 0;
   margin-bottom: 50px;
   list-style: none;
 }
 
+
 .breadcrumbs a {
   color: #000000;
+  position: relative;
+  margin-right: 40px;
+}
+
+.breadcrumbs a::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  right: -50%;
+  margin-top: -5px;
+
+  width: 10px;
+  height: 10px;
+  background-color: #000000;
+
+  transform: rotate(45deg);
 }
 
 .breadcrumbs a:hover,
@@ -463,6 +482,8 @@ img {
 }
 
 .catalog-item {
+  display: flex;
+  flex-direction: column;
   width: 220px;
   margin-bottom: 20px;
   margin-right: 20px;
@@ -479,19 +500,37 @@ img {
 }
 
 .catalog-item a {
+  display: flex;
+  flex-direction: column;
+
   color: #000000;
 }
 
 .catalog-item h3 {
   font-size: 14px;
+  margin-left: 15px;
   line-height: 18px;
+  order: 2;
+}
+
+.catalog-category,
+.catalog-item-title {
+  display: block;
 }
 
 .catalog-category {
   text-transform: none;
 }
 
+.catalog-item-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .catalog-item-price b {
+ /* display: block;*/
+  padding: 10px 35px;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
@@ -500,17 +539,23 @@ img {
 }
 
 .catalog-item-price .button {
+  margin-right: 0;
   line-height: 18px;
   color: #ffffff;
 }
 
 .pagination-list {
+  display: flex;
   list-style: none;
   margin-bottom: 25px;
+  margin: 0;
+  margin-top: 45px;
+  padding: 0;
 }
 
 .pagination-list a {
   color: #ffffff;
+  padding: 15px;
 
   background-color: #000000;
 }
@@ -519,6 +564,10 @@ img {
 .pagination-list a:focus,
 .pagination-list a:active {
   background-color: #663d15;
+}
+
+.pagination-item {
+  margin-right: 10px;
 }
 
 .pagination-item-current a {
